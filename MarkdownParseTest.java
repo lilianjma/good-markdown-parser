@@ -99,5 +99,43 @@ public class MarkdownParseTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void Test9() throws IOException{
+        List expected = List.of("a link on the first line");
+
+        Path fileName = Path.of("test-file9.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actual = MarkdownParse.getLinks(content);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void TestEx1() throws IOException{
+        List expected = List.of("a link on the first line");
+
+        Path fileName = Path.of("example1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actual = MarkdownParse.getLinks(content);
+    }
+
+    @Test
+    public void TestEx2() throws IOException{
+        List expected = List.of("a link on the first line");
+
+        Path fileName = Path.of("example2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actual = MarkdownParse.getLinks(content);
+    }
+
+    @Test
+    public void TestEx3() throws IOException{
+        List expected = List.of("a link on the first line");
+
+        Path fileName = Path.of("example3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> actual = MarkdownParse.getLinks(content);
+    }
 }
 
